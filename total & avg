@@ -1,0 +1,10 @@
+sno = int(input("Sno = "))
+sname = (input("sname = "))
+group = (input("group = "))
+mark1 = int(input("Enter the marks of first subject: "))
+mark2 = int(input("Enter the marks of second subject: "))
+mark3 = int(input("Enter the marks of third subject: "))
+total = mark1+mark2+mark3
+average = total/3
+print("Total marks: ",total)
+print("Average marks: ",average)
