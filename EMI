@@ -1,0 +1,8 @@
+given_principle = float(input("Enter principle = "))
+given_rate = float(input("Enter rate = "))
+given_time = float(input("Enter time = "))
+given_rate = given_rate/(12*100)
+given_time = given_time*12
+final_Emi = (given_principle*given_rate*pow(1+given_rate, given_time)) / \
+    (pow(1+given_rate, given_time)-1)
+print("The EMI = ", final_Emi)
