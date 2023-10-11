@@ -1,0 +1,7 @@
+a = int(input("Enter the First Value a: "))
+b = int(input("Enter the Second Value b: "))
+if(a > b):
+    print("{0} is Biggest".format(a))
+else:
+    (b > a)
+    print("{0} is Biggest".format(b))
