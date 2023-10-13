@@ -1,0 +1,28 @@
+tomatoes=20
+books=100
+eggs=5
+print('Welcome to python mall')
+cname=input('Enter customer name = ')
+cphno=input('Enter Phno = ')
+tomatoes_wght=int(input('Enter kgs of tomatoes = '))
+books_quantity=int(input('Enter no of books = '))
+eggs_quantity=int(input('Enter no of eggs = '))
+bill=(tomatoes*tomatoes_wght)+(books*books_quantity)+(eggs*eggs_quantity)
+if bill>=2000:
+    disc=bill*20/100
+elif bill>=1000:
+    disc=bill*10/100
+elif bill>=500:
+    disc=bill*5/100
+else:
+    disc=bill*3/100
+tbill=bill-disc
+gst=tbill*12/100
+obill=tbill+gst
+print('Customer name:',cname)
+print('Customer phno:',cphno)
+print('Bill:',bill)
+print('Discount:',disc)
+print('Gst 12%:',gst)
+print('Bill to be paid:',obill)
+print('***Thank you!!!Visit Again***')
