@@ -1,0 +1,6 @@
+num = int(input("Enter the Number: "))
+i = 1
+print("The Natural Numbers from 1 to {0} = ".format(num)) 
+while ( i <= num):
+    print (i, end = '  ')
+    i = i + 1
