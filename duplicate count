@@ -1,0 +1,7 @@
+n = int(input())
+l=list(map(int,input().split()))
+dup = {}
+for a in l:
+    if l.count(a) > 1:
+        dup[a] = dup.get(a, 0)+1
+print(len(dup))
