@@ -1,0 +1,14 @@
+rows = int(input())
+matrix = []
+for i in range(rows):
+    values = input().split()
+    row = [int(value) for value in values]
+    matrix.append(row)
+cols = len(matrix[0])
+column_sums = [0] * cols
+for row in matrix:
+    for j in range(cols):
+        column_sums[j] += row[j]
+print()
+for i in range(cols):
+    print(f"{column_sums[i]}")
