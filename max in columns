@@ -1,0 +1,13 @@
+n = int(input())
+matrix = []
+for i in range(n):
+    values = input().split()
+    num = [int(value) for value in values]
+    matrix.append(num)
+max_values = []
+for j in range(len(matrix[0])):
+    column = [num[j] for num in matrix]
+    max_value = max(column)
+    max_values.append(max_value)
+for i, max_value in enumerate(max_values):
+    print(f"{max_value}")
