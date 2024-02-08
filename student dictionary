@@ -1,0 +1,30 @@
+student = {} 
+
+htno = int(input('Enter HTNO: '))
+sname = input('Enter name: ')
+
+subjects = {}
+subjects["Maths"] = int(input('Enter Maths marks: '))
+subjects["Physics"] = int(input('Enter Physics marks: '))
+subjects["CS"] = int(input('Enter CS marks: '))
+subjects["Chemistry"] = int(input('Enter Chemistry marks: '))
+subjects["Biology"] = int(input('Enter Biology marks: '))
+
+student[htno] = {
+    "Name": sname,
+    "Subjects": subjects
+}
+
+total_marks = sum(subjects.values())
+percentage = (total_marks / (len(subjects) * 100)) * 100
+result = "Pass" if percentage >= 40 else "Fail"
+
+print("\nStudent dictionary:")
+print("HTNO:", htno)
+print("Name:", student[htno]["Name"])
+print("Subjects and Marks:")
+for subject, marks in student[htno]["Subjects"].items():
+    print(subject + ":", marks)
+print("Total Marks:", total_marks)
+print("Percentage:", percentage)
+print("Result:", result)
