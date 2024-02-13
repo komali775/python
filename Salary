@@ -1,0 +1,32 @@
+def calculate_tax(net_salary):
+    if net_salary > 50000:
+        return net_salary * 0.05
+    elif net_salary > 35000:
+        return net_salary * 0.03
+    elif net_salary > 20000:
+        return net_salary * 0.01
+    else:
+        return 0
+
+empno = int(input("Enter Employee Number: "))
+empname = input("Enter Employee Name: ")
+designation = input("Enter Designation: ")
+basic = float(input("Enter Basic Salary: "))
+hra = float(input("Enter HRA: "))
+da = float(input("Enter DA: "))
+ta = float(input("Enter TA: "))
+
+def generate_salary_bill(empno, empname, designation, basic, hra, da, ta):
+    net_salary = basic + hra + da + ta
+    tax = calculate_tax(net_salary)
+    print("Emp No:", empno)
+    print("Emp Name:", empname)
+    print("Designation:", designation)
+    print("Basic Salary:", basic)
+    print("HRA:", hra)
+    print("DA:", da)
+    print("TA:", ta)
+    print("Net Salary:", net_salary)
+    print("Tax:", tax)
+
+generate_salary_bill(empno, empname, designation, basic, hra, da, ta)
