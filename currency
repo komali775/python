@@ -1,0 +1,14 @@
+def find_currency_denominations(amount):
+    denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+    result = {}
+    for note in denominations:
+        count = amount // note 
+        amount %= note        
+        result[note] = count  
+
+    return result
+amount = int(input())
+denominations_used = find_currency_denominations(amount)
+for note, count in denominations_used.items():
+    if count > 0:  
+        print(f"{note}:{count}")
